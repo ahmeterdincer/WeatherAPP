@@ -5,9 +5,7 @@ from tkinter import *
 from tkinter import messagebox, TclError
 import json
 import matplotlib.pyplot as plt
-
-# try except bloklarını aidan aldım 
-
+ 
 
 def veritabani():
     dosya = sqlite3.connect("hava_durumu.db")
@@ -36,8 +34,6 @@ pen = Tk()
 pen.title('Hava Durumu')
 
 
-# projeyi kütüphane internetiyle yapıyordum okul interneti colletapiyi engelliyormus bunu sonradan 
-# farkettim oy yüzden sorgu fonkisyonunun yarısından fazasını ai a düzelttirdim 
 
 def sorgu(sehir):
     conn = http.client.HTTPSConnection("api.collectapi.com")
@@ -72,7 +68,7 @@ def gunluk():
         messagebox.showwarning("Uyarı", "Herhangi bir öğe seçilmedi.")
 
 
-# grafik çiziminde aidan yardım aldım
+
 
 def grafik(gun, derece, sehir):
     plt.figure(figsize=(8, 4))
@@ -111,8 +107,7 @@ def haftalik():
     except TclError:
         messagebox.showwarning("Uyarı", "Herhangi bir öğe seçilmedi.")
 
-
-# şehirleri ai dan aldım
+
 sehirler = [
     "Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Aksaray", "Amasya", "Ankara", "Antalya",
     "Ardahan", "Artvin", "Aydın", "Balıkesir", "Bartın", "Batman", "Bayburt", "Bilecik",
